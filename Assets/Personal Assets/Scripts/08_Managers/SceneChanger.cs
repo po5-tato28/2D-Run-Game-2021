@@ -9,4 +9,9 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Lobby");
     }
+
+    public void OnClickCastleStage()
+    {
+        SceneManager.LoadScene("Game");
+    }
 }
