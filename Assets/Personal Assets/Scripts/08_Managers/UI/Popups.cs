@@ -4,30 +4,31 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class ExitPopup : MonoBehaviour
+public class Popups : MonoBehaviour
 {
-    public GameObject popup;
+    public GameObject exitPopup;
+    public GameObject scorePoup;
 
     private void Start()
     {
-        if(popup.activeSelf)
+        if(exitPopup.activeSelf)
         {
-            popup.SetActive(false);
+            exitPopup.SetActive(false);
         }        
     }
 
     public void OnClickOptionButton()
     {
-        popup.SetActive(true);
+        exitPopup.SetActive(true);
     }
 
     public void OnClickYesButton()
     {
-        popup.SetActive(false);
+        exitPopup.SetActive(false);
         Application.Quit();
     }
     public void OnClickNoButton()
     {
-        popup.SetActive(false);
+        exitPopup.SetActive(false);
     }
 }

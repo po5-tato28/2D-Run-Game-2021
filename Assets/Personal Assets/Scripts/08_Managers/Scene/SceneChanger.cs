@@ -14,4 +14,14 @@ public class SceneChanger : MonoBehaviour
     {
         SceneManager.LoadScene("Game");
     }
+
+    public void OnClickReplay()
+    {
+        SceneManager.LoadScene("Game");
+    }
+
+    public void OnClickHome()
+    {
+        SceneManager.LoadScene("Lobby");
+    }
 }
