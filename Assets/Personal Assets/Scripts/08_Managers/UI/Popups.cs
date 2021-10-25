@@ -19,6 +19,7 @@ public class Popups : MonoBehaviour
 
     public void OnClickOptionButton()
     {
+        Time.timeScale = 0f;
         exitPopup.SetActive(true);
     }
 
@@ -30,5 +31,6 @@ public class Popups : MonoBehaviour
     public void OnClickNoButton()
     {
         exitPopup.SetActive(false);
+        Time.timeScale = 1f;
     }
 }

@@ -27,11 +27,17 @@ public class PlayerController : MonoBehaviour
 
         runlength += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            SetJump();
-        }
+        //if (Input.GetMouseButtonDown(0))
+        //{
+        //    SetJump();
+        //}
     }
+    
+    public void OnClickJumpButton()
+    {
+        SetJump();
+    }
+
 
     public void SetJump()
     {

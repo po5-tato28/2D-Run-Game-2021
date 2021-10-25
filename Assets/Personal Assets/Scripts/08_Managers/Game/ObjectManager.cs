@@ -35,7 +35,7 @@ public class ObjectManager : MonoBehaviour
 
         if (createtick >= createtime)
         {
-            createtime = Random.RandomRange(0.7f, 1.2f);
+            createtime = Random.Range(4.0f, 5.0f);
 
             createtick = 0.0f;
 
@@ -43,7 +43,7 @@ public class ObjectManager : MonoBehaviour
             {
                 if (!st.activeSelf)
                 {
-                    st.transform.position = new Vector3(20.0f, -7.6f, 0.0f);
+                    st.transform.position = new Vector3(6.6f, -3f, 0.0f);
                     st.SetActive(true);
                     break;
                 }

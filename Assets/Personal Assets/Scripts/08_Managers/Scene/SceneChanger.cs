@@ -17,7 +17,8 @@ public class SceneChanger : MonoBehaviour
 
     public void OnClickReplay()
     {
-        SceneManager.LoadScene("Game");
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Game");        
     }
 
     public void OnClickHome()

@@ -584,7 +584,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50628425f28404f47995c7ccdb23987f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  popup: {fileID: 1729235711}
+  exitPopup: {fileID: 1729235711}
+  scorePoup: {fileID: 0}
 --- !u!1 &968622846
 GameObject:
   m_ObjectHideFlags: 0
