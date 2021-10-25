@@ -18,8 +18,8 @@
 !/[Aa]ssets/**/*.meta
 
 # Uncomment this line if you wish to ignore the asset store tools plugin
-2D-Run-Game-2021/[Aa]ssets/AssetStoreTools*
-2D-Run-Game-2021/[Aa]ssets/External Assets*
+/[Aa]ssets/AssetStoreTools*
+/[Aa]ssets/External Assets*
 
 # TextMesh Pro files
 [Aa]ssets/TextMesh*Pro/
