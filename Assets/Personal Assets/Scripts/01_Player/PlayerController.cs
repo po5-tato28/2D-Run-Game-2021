@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class PlayerController : MonoBehaviour
     private bool isdead;
     private float runlength;
     private int jumpcount;
+
 
     // Use this for initialization
     void Awake()
@@ -26,16 +28,16 @@ public class PlayerController : MonoBehaviour
         if (isdead) return;
 
         runlength += Time.deltaTime;
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    SetJump();
-        //}
     }
     
     public void OnClickJumpButton()
     {
         SetJump();
+    }
+
+    public void OnClickAttackButton()
+    {
+        SetAttack();
     }
 
 
@@ -57,6 +59,12 @@ public class PlayerController : MonoBehaviour
 
             jumpcount--;
         }
+    }
+    private void SetAttack()
+    {
+        if (isdead) return;
+
+        ani.SetTrigger("Attack");
     }
 
     void OnCollisionEnter2D(Collision2D coll)

@@ -9,6 +9,7 @@ public class ObjectManager : MonoBehaviour
 
     private List<GameObject> Stonlist;
     private float createtick;
+
     //private GameObject[] StonArray;
     // Use this for initialization
     void Awake()
@@ -35,7 +36,7 @@ public class ObjectManager : MonoBehaviour
 
         if (createtick >= createtime)
         {
-            createtime = Random.Range(4.0f, 5.0f);
+            createtime = Random.Range(3.0f, 4.0f);
 
             createtick = 0.0f;
 

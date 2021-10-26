@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Background
   - Ground
+  - Fireball
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -57,4 +59,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 1855088801
+    locked: 0
+  - name: Effect
+    uniqueID: 3433017309
     locked: 0
