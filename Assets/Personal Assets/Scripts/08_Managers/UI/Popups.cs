@@ -6,17 +6,28 @@ using UnityEngine.SceneManagement;
 
 public class Popups : MonoBehaviour
 {
+    public static Popups instance = null;
+    
     public GameObject exitPopup;
-    public GameObject scorePoup;
-
     public GameObject scorePopup;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
 
     private void Start()
     {
         if (exitPopup.activeSelf) exitPopup.SetActive(false);
 
-        if (exitPopup.activeSelf) scorePopup.SetActive(false);
+        if(scorePopup != null)
+        {
+            if (scorePopup.activeSelf)
+                scorePopup.SetActive(false);
+        }
     }
 
     public void OnClickOptionButton()
@@ -34,5 +45,10 @@ public class Popups : MonoBehaviour
     {
         exitPopup.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    public void UpScoreBoard()
+    {
+        scorePopup.SetActive(true);
     }
 }

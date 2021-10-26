@@ -1082,7 +1082,7 @@ GameObject:
   - component: {fileID: 807689674}
   m_Layer: 0
   m_Name: ObjectManager
-  m_TagString: Untagged
+  m_TagString: Pooling
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1209,7 +1209,7 @@ GameObject:
   - component: {fileID: 858599538}
   m_Layer: 0
   m_Name: BackForest
-  m_TagString: Background
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2955,7 +2955,7 @@ GameObject:
   - component: {fileID: 1621104041}
   m_Layer: 0
   m_Name: FrontForest
-  m_TagString: Background
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3285,7 +3285,7 @@ GameObject:
   - component: {fileID: 1951629430}
   m_Layer: 0
   m_Name: Forest
-  m_TagString: Ground
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3352,8 +3352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   exitPopup: {fileID: 949660604}
-  scorePoup: {fileID: 1322560702}
-  scorePopup: {fileID: 0}
+  scorePopup: {fileID: 1322560702}
 --- !u!114 &1963773246
 MonoBehaviour:
   m_ObjectHideFlags: 0

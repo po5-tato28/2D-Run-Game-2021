@@ -70,13 +70,32 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            //other.gameObject.SendMessage("ObjectHide");            
-
             ani.SetTrigger("Hit");
-            isdead = true;
+            isdead = true;            
 
-            GameObject.FindGameObjectsWithTag("Ground");
-            print("충돌했습니다");
+            // "Ground" 태그를 가지고 있는 오브젝트 5개에 SendMessage
+            for (int i = 0; i < 5; i++)
+            {
+                GameObject.FindGameObjectsWithTag("Ground")[i].SendMessage("StopScroll");
+            }
+            // "Pooling" 태그를 가지고 있는 오브젝트에 SendMessage
+            GameObject.FindGameObjectWithTag("Pooling").SendMessage("DisableObject");
+
+            OnDeath();
+            
+            //print("충돌했습니다");
         }
+    }
+
+    void OnDeath()
+    {
+        if (isdead == false) return;
+
+        Invoke("CallScoreBoard", 3f);
+    }
+
+    void CallScoreBoard()
+    {
+        Popups.instance.UpScoreBoard();
     }
 }

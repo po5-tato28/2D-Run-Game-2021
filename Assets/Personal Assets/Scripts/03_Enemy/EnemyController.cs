@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour
     {
         hit = false;
     }
+
     void Update()
     {
         if (hit == true) return;
@@ -26,13 +27,18 @@ public class EnemyController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Fireball"))
+        if (other.gameObject.CompareTag("Fireball"))
         {
             hit = true;
 
             GetComponent<Animator>().SetTrigger("Hit");
             Invoke("ObjectHide", 0.6f);
-        }        
+        }
+
+        if (other.gameObject.CompareTag("Player"))
+        {
+            hit = true;
+        }
     }
 
     public void ObjectHide()

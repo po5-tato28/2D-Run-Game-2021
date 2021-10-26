@@ -13,7 +13,7 @@ public class ObjectManager : MonoBehaviour
     //private GameObject[] StonArray;
     // Use this for initialization
     void Awake()
-    {
+    {   
         createtick = 0.0f;
         createtime = 1.0f;
         //StonArray
@@ -44,16 +44,16 @@ public class ObjectManager : MonoBehaviour
             {
                 if (!st.activeSelf)
                 {
-                    st.transform.position = new Vector3(4.6f, -3f, 0.0f);
+                    st.transform.position = new Vector3(6.6f, -3f, 0.0f);
                     st.SetActive(true);
                     break;
                 }
             }
-            /*
-            for (int i = 0; i < Stonlist.Count; i++)
-            {
-
-            }*/
         }
+    }
+
+    public void DisableObject()
+    {
+        gameObject.SetActive(false);
     }
 }

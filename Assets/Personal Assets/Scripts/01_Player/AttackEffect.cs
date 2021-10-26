@@ -25,7 +25,7 @@ public class AttackEffect : MonoBehaviour
         pos.x += (Time.deltaTime * 1f);
         transform.position = pos;
 
-        if (transform.position.x >= 4.0f)
+        if (transform.position.x >= 6.6f)
         {
             DisableFireball();
         }
@@ -39,13 +39,14 @@ public class AttackEffect : MonoBehaviour
             Debug.Log("enemy");
 
             hit = true;
+            ScoreManager.instance.AddScore(100);
 
             GetComponent<Animator>().SetTrigger("Hit");
             Invoke("DisableFireball", 0.8f);
         }
     }
 
-public void DisableFireball()
+    public void DisableFireball()
     {
         gameObject.SetActive(false);
     }

@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Fireball
   - Enemy
+  - Pooling
   layers:
   - Default
   - TransparentFX
