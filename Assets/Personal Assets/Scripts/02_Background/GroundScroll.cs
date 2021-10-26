@@ -8,17 +8,18 @@ public class GroundScroll : MonoBehaviour
 	private float scrollSpeed = 0.0f;
 	private SpriteRenderer spritescript;
 
-	private bool uiscroll;
+	private bool isScroll = true;
 
-	void Awake()
+    private void Start()
+    {
+		isScroll = true;
+    }
+
+    void LateUpdate()
 	{
+		if (isScroll == false) return;
 
-	}
 
-	// Update is called once per frame
-
-	void LateUpdate()
-	{
 		scrollSpeed += Time.deltaTime * (scrollcalcu * 0.1f);
 
 		if (scrollSpeed >= 0.6f)
@@ -28,4 +29,9 @@ public class GroundScroll : MonoBehaviour
 
 		GetComponent<SpriteRenderer>().material.mainTextureOffset = new Vector2(scrollSpeed, 0.0f);
 	}
+
+	public void StopScroll()
+    {
+		isScroll = false;
+    }
 }

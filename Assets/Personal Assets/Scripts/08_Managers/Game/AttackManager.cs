@@ -7,9 +7,33 @@ public class AttackManager : MonoBehaviour
     public GameObject attackPrefab;
     public Transform attackPoint;
 
+    private List<GameObject> attackList;
+
+    private void Awake()
+    {
+        attackList = new List<GameObject>();
+    }
+
+    private void Start()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject attack = Instantiate(attackPrefab, attackPoint) as GameObject;
+            attack.SetActive(false);
+            attackList.Add(attack);
+        }
+    }
+
 
     public void EnableFireball()
     {
-        Instantiate(attackPrefab, attackPoint);
+        foreach(GameObject att in attackList)
+        {
+            if(!att.activeSelf)
+            {
+                att.SetActive(true);
+                break;
+            }
+        }
     }
 }

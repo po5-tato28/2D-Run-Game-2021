@@ -9,12 +9,14 @@ public class Popups : MonoBehaviour
     public GameObject exitPopup;
     public GameObject scorePoup;
 
+    public GameObject scorePopup;
+
+
     private void Start()
     {
-        if(exitPopup.activeSelf)
-        {
-            exitPopup.SetActive(false);
-        }        
+        if (exitPopup.activeSelf) exitPopup.SetActive(false);
+
+        if (exitPopup.activeSelf) scorePopup.SetActive(false);
     }
 
     public void OnClickOptionButton()

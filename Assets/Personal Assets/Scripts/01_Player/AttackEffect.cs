@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AttackEffect : MonoBehaviour
-{
+{    
     private Vector3 pos;
     public Transform attackPoint;
 
+    bool hit = false;
+
     private void OnEnable()
     {
-        pos = transform.position;
+        hit = false;
+        pos = transform.position;        
     }
     private void OnDisable()
     {
@@ -18,25 +21,31 @@ public class AttackEffect : MonoBehaviour
 
     void Update()
     {
+        if (hit == true) return;
         pos.x += (Time.deltaTime * 1f);
         transform.position = pos;
 
-        if (transform.position.x >= 6.0f)
+        if (transform.position.x >= 4.0f)
         {
             DisableFireball();
         }
     }
 
-    private void OnTrigger(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Enemy"))
+        if(other.gameObject.CompareTag("Enemy"))
         {
             Debug.Log("enemy");
-            DisableFireball();
+
+            hit = true;
+
+            GetComponent<Animator>().SetTrigger("Hit");
+            Invoke("DisableFireball", 0.8f);
         }
     }
 
-    public void DisableFireball()
+public void DisableFireball()
     {
         gameObject.SetActive(false);
     }

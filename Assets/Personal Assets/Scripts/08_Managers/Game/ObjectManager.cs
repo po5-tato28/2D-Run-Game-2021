@@ -44,7 +44,7 @@ public class ObjectManager : MonoBehaviour
             {
                 if (!st.activeSelf)
                 {
-                    st.transform.position = new Vector3(6.6f, -3f, 0.0f);
+                    st.transform.position = new Vector3(4.6f, -3f, 0.0f);
                     st.SetActive(true);
                     break;
                 }

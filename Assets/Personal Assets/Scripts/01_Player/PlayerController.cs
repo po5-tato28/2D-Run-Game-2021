@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     private float runlength;
     private int jumpcount;
 
-
     // Use this for initialization
     void Awake()
     {
@@ -67,17 +66,17 @@ public class PlayerController : MonoBehaviour
         ani.SetTrigger("Attack");
     }
 
-    void OnCollisionEnter2D(Collision2D coll)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (coll.gameObject.tag == "Ston")
+        if (other.gameObject.CompareTag("Enemy"))
         {
-            coll.gameObject.SendMessage("ObjectHide");
+            //other.gameObject.SendMessage("ObjectHide");            
 
-            ani.SetTrigger("dead");
+            ani.SetTrigger("Hit");
             isdead = true;
 
+            GameObject.FindGameObjectsWithTag("Ground");
             print("충돌했습니다");
         }
-
     }
 }
