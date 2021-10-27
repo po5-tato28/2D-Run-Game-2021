@@ -9,6 +9,7 @@ TagManager:
   - Fireball
   - Enemy
   - Pooling
+  - ScoreText
   layers:
   - Default
   - TransparentFX
