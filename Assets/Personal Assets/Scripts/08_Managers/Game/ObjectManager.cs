@@ -5,31 +5,27 @@ using UnityEngine;
 public class ObjectManager : MonoBehaviour
 {
     public GameObject enemy;
-    private float createtime;
+    private List<GameObject> enemyList;
 
-    private List<GameObject> Stonlist;
+    private float createtime;
     private float createtick;
 
-    //private GameObject[] StonArray;
-    // Use this for initialization
     void Awake()
     {   
         createtick = 0.0f;
         createtime = 1.0f;
-        //StonArray
-        //Stonlist.Clear();
-        Stonlist = new List<GameObject>();
+        
+        enemyList = new List<GameObject>();
 
         for (int i = 0; i < 10; i++)
         {
-            GameObject ston = Instantiate(enemy, Vector3.zero, Quaternion.identity) as GameObject;
-            ston.transform.parent = transform;
-            ston.SetActive(false);
-            Stonlist.Add(ston);
+            GameObject enemies = Instantiate(enemy, Vector3.zero, Quaternion.identity) as GameObject;
+            enemies.transform.parent = transform;
+            enemies.SetActive(false);
+            enemyList.Add(enemies);
         }
     }
 
-    // Update is called once per frame
     void Update()
     {
         createtick += Time.deltaTime;
@@ -40,7 +36,7 @@ public class ObjectManager : MonoBehaviour
 
             createtick = 0.0f;
 
-            foreach (GameObject st in Stonlist) //list array ตัดู ตส.
+            foreach (GameObject st in enemyList) //list array ตัดู ตส.
             {
                 if (!st.activeSelf)
                 {
