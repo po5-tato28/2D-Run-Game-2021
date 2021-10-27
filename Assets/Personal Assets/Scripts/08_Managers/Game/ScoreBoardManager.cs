@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreBoardManaer : MonoBehaviour
+public class ScoreBoardManager : MonoBehaviour
 {    
     public Text result;
     public Text best;

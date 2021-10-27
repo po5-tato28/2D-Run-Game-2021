@@ -42,7 +42,7 @@ public class AttackEffect : MonoBehaviour
             ScoreManager.instance.AddScore(100);
 
             GetComponent<Animator>().SetTrigger("Hit");
-            Invoke("DisableFireball", 0.8f);
+            //Invoke("DisableFireball", 0.8f);
         }
     }
 
