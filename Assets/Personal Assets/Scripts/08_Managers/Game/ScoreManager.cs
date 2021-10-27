@@ -30,7 +30,8 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log("OnSceneLoaded: " + scene.name);
 
-        currentScoreText = GameObject.Find("Current Score Text").GetComponent<Text>();
+        if (SceneManager.GetActiveScene().name == "Game")
+            currentScoreText = GameObject.Find("Current Score Text").GetComponent<Text>();
     }
 
     private void Awake()

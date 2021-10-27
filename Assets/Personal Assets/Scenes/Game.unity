@@ -873,7 +873,7 @@ GameObject:
   - component: {fileID: 748204951}
   - component: {fileID: 748204953}
   - component: {fileID: 748204952}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Black Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -949,7 +949,7 @@ GameObject:
   - component: {fileID: 801599244}
   - component: {fileID: 801599243}
   - component: {fileID: 801599242}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Replay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1365,7 +1365,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 949660605}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Exit Popup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1387,7 +1387,7 @@ RectTransform:
   - {fileID: 1586989889}
   - {fileID: 801599241}
   m_Father: {fileID: 1497476179}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1502,7 +1502,7 @@ GameObject:
   - component: {fileID: 1017268993}
   - component: {fileID: 1017268992}
   - component: {fileID: 1017268991}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Yes Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2295,7 +2295,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1393068652}
   - component: {fileID: 1393068653}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Buttons Array
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2520,8 +2520,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1220348935}
-  - {fileID: 949660605}
   - {fileID: 1978760342}
+  - {fileID: 949660605}
   - {fileID: 4639285091656281467}
   - {fileID: 1322560703}
   m_Father: {fileID: 0}
@@ -2798,7 +2798,7 @@ GameObject:
   - component: {fileID: 1586989889}
   - component: {fileID: 1586989891}
   - component: {fileID: 1586989890}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Pannel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2970,7 +2970,7 @@ GameObject:
   - component: {fileID: 1695196579}
   - component: {fileID: 1695196581}
   - component: {fileID: 1695196580}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Go!
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3311,7 +3311,7 @@ GameObject:
   - component: {fileID: 1975900844}
   - component: {fileID: 1975900846}
   - component: {fileID: 1975900845}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ready?
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3384,7 +3384,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1978760342}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3405,7 +3405,7 @@ RectTransform:
   - {fileID: 1975900844}
   - {fileID: 1695196579}
   m_Father: {fileID: 1497476179}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3424,7 +3424,7 @@ GameObject:
   - component: {fileID: 2013372556}
   - component: {fileID: 2013372555}
   - component: {fileID: 2013372554}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: No Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3555,7 +3555,7 @@ GameObject:
   - component: {fileID: 2113639111}
   - component: {fileID: 2113639113}
   - component: {fileID: 2113639112}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
